@@ -1,0 +1,163 @@
+<!--
+	header.main
+	nav.main
+	div.container
+		div.row <-- bible
+			section
+				article
+					header
+				article
+					header
+				...
+			section
+				article
+					header
+				article
+					header
+				...
+		div.row <-- shakespeare
+		...
+		div.ponder <-- used to display phrases for pondering
+			div.prev
+			div.phrase
+			div.next
+	div.passageData
+		p.currentPhrase
+		p
+		...
+-->
+<header class="main">
+	<h1>PONDER SOMETHING</h1>
+</header>
+
+<nav>
+	<ul>
+		<li><a href="#bible">Bible</a></li>
+		<li><a href="#shakespeare">Shakespeare</a></li>
+		<li><a href="#lyrics">Lyrics</a></li>
+	</ul>
+</nav>
+
+<div id="ponderControls" class="col-lg-12 hidden"><div><a href="#">X</a></div></div>
+	
+
+<div class="container">
+	<div class="row">
+	<section id="bible" class="hidden">
+		<article id="passage1" class="sonnet col-md-4">
+			<header><h1>Psalm 23</h1></header>
+			<div class="drop">T</div>
+			<ul>
+				<li>The Lord is my Shepherd</li>
+				<li>There is nothing I shall want</li>
+				<li>He makes me lie down</li>
+				<li>In pastures green</li>
+			</ul>
+		</article>
+		<article id="passage2" class="sonnet col-md-4">
+			<header><h1>Genesis 1</h1></header>
+			<div class="drop">I</div>
+			<ul>
+				<li>In the beginning</li>
+				<li>God created the heavens and the earth</li>
+				<li>Now the earth was formless</li>
+				<li>And the Spirit of God hovered</li>
+				<li>Over the surface of the deep</li>
+			</ul>
+		</article>
+		<article id="passage3" class="sonnet col-md-4">
+			<header><h1>Exodus 3</h1></header>
+			<div class="drop">I</div>
+			<ul>
+				<li>I am who Am</li>
+				<li>Tell them I am</li>
+				<li>Has sent me</li>
+				<li>To You</li>
+			</ul>
+		</article>
+	</section>
+	</div>
+	<div class="row">
+	<section id="shakespeare" class="category hidden">
+		<article id="passage4" class="sonnet col-md-4">
+			<header><h1>Sonnet 1</h1></header>
+			<div class="drop">F</div>
+			<ul>
+				<li>From fairest creatures we desire increase,</li>
+				<li>That thereby beauty's rose might never die,</li>
+				<li>But as the riper should by time decease,</li>
+				<li>His tender heir might bear his memory:</li>
+			</ul>
+		</article>
+		<article id="passage5" class="sonnet col-md-4">
+			<header><h1>Sonnet 2</h1></header>
+			<div class="drop">W</div>
+			<ul>
+				<li>When forty winters shall besiege thy brow,</li>
+				<li>And dig deep trenches in thy beauty's field,</li>
+				<li>Thy youth's proud livery so gazed on now,</li>
+				<li>Will be a totter'd weed of small worth held:</li>
+			</ul>
+		</article>
+		<article id="passage6" class="sonnet col-md-4">
+			<header><h1>Sonnet 3</h1></header>
+			<div class="drop">W</div>
+			<ul>
+				<li>When forty winters shall besiege thy brow,</li>
+				<li>And dig deep trenches in thy beauty's field,</li>
+				<li>Thy youth's proud livery so gazed on now,</li>
+				<li>Will be a totter'd weed of small worth held:</li>
+			</ul>
+		</article>
+	</section>
+	</div>
+	<div class="row">
+	<section id="lyrics" class="category hidden">
+		<article id="passage7" class="sonnet col-md-4">
+			<header><h1>Yahweh, U2</h1></header>
+			<div class="drop">T</div>
+			<ul>
+				<li>Take these lips</li>
+				<li>Sp quick to criticize</li>
+				<li>Take these lips</li>
+				<li>Give them a kiss</li>
+			</ul>
+		</article>
+		<article id="passage8" class="sonnet col-md-4">
+			<header><h1>Two Hands, Jars of Clay</h1></header>
+			<div class="drop">I</div>
+			<ul>
+				<li>I have a broken disposition</li>
+				<li>I'm a liar who thirsts for the truth</li>
+				<li>And while I ache for faith to hold me</li>
+				<li>I need to feel the scars and see the proof</li>
+			</ul>
+		</article>
+		<article id="passage9" class="sonnet col-md-4">
+			<header><h1>Love, Sara Groves</h1></header>
+			<div class="drop">L</div>
+			<ul>
+				<li>love I made it mine</li>
+				<li>I made it small I made it blind</li>
+				<li>I followed hard only to find</li>
+				<li>it wasn't love</li>
+			</ul>
+		</article>
+	</section>
+	</div> <!-- //row -->
+	<div class="ponder offstage row">
+		<div class="row">
+			<div class="col-lg-1 prev"><a href="#prev">&lt;</a></div>
+			<div class="col-lg-10 phrase">The Lord is my Shepherd</div>
+			<div class="col-lg-1 next"><a href="#next">&gt;</a></div>
+		</div>
+	</div>
+</div> <!-- //container -->
+<div id="passageData">
+	<p class="currentPhrase">The Lord is my Shepherd</p>
+	<p>There is nothing I shall want</p>
+	<p>He makes me lie down</p>
+	<p>In pastures green</p>
+</div>
+<footer>
+</footer>

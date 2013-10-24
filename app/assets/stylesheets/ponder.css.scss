@@ -1,0 +1,182 @@
+// Place all the styles related to the ponder controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "compass/css3";
+
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('/fonts/quicksand-regular-webfont.eot');
+    src: url('/fonts/quicksand-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/quicksand-regular-webfont.woff') format('woff'),
+         url('/fonts/quicksand-regular-webfont.ttf') format('truetype'),
+         url('/fonts/quicksand-regular-webfont.svg#quicksandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'great_vibesregular';
+    src: url('/fonts/greatvibes/greatvibes-regular-webfont.eot');
+    src: url('/fonts/greatvibes/greatvibes-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/greatvibes/greatvibes-regular-webfont.woff') format('woff'),
+         url('/fonts/greatvibes/greatvibes-regular-webfont.ttf') format('truetype'),
+         url('/fonts/greatvibes/greatvibes-regular-webfont.svg#great_vibesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	padding: 5px;
+	background-color: #F4F4F4;
+	background-image: url(/assets/mainbg.jpg);
+	font: normal 12pt/14pt 'quicksandregular', Arial, sans-serif;
+}
+
+.container{
+	position:relative;
+	section{
+		width:100%;
+		overflow:auto;
+		position: absolute;
+		@include transition(all 0.8s ease-in-out);
+	}
+}
+
+
+header.main{
+	//@include box-shadow(1px 1px 3px #aaa);
+	margin:10px 10px 0 10px;
+	background: rgba(0, 0, 0, 0.2);
+	overflow: auto;
+	color: #04D9E1;
+	@include border-radius(10px);
+	@include box-shadow(2px, 2px, 4px, #000);
+	@include transition(all 1s ease-in-out);
+	h1{
+		text-align:center;
+		font-size: 48pt;
+		line-height: 40pt;
+		letter-spacing: 20px;
+	}
+}
+
+header.main:hover{
+	background: rgba(0, 0, 0, 0.5);
+	color:darkblue;
+}
+
+nav {
+	margin:10px 10px 0 10px;
+	background-color: black;
+	opacity: 0.1;
+	overflow:auto;
+	@include border-radius(10px);
+	@include transition(opacity 1s ease-in-out);
+	ul li {
+		display:inline;
+		a {
+			text-decoration:none;
+			color: white;
+			padding: 10px;
+			margin-left: 20px;
+			width:100px;
+			@include border-radius(10px);
+			@include transition(all 0.2s ease-in-out);	
+		}
+		a:hover{
+			text-decoration:none;
+			color:orange;
+		}
+	}
+}
+nav:hover{
+	opacity:0.5;
+}
+
+article{
+	//width:90%;
+	position:relative;
+	background: rgba(255, 255, 255, 0.2);
+	margin: 10px 0 0 0;
+	height: 100%;
+ 	font-size: 12pt;
+ 	line-height: 17pt;
+ 	@include transition(all 0.2s ease-in-out);	
+ 	ul{
+ 		list-style-type: none;
+ 	}
+ 	h1{
+ 		margin-left: 10px;
+ 	}
+}
+
+.ponder{
+	width:100%;
+	margin: 0 auto;
+	z-index:-1;
+	position:absolute;
+	@include transition(all 1s ease-in-out);
+	font: normal 48pt/56pt 'quicksandregular';
+	div.phrase{
+		text-align: center;
+		overflow: auto;
+		color:red;
+		@include transition(all 1s ease-in-out);
+	}
+}
+#ponderControls{
+	@include transition(all 1s ease-in-out);
+	font-size:30px;
+	background-color: rgb(0, 0, 0);
+	position:absolute;
+	top:0px;
+	left:0px;
+	text-align:right;
+	height:50px;
+	overflow:auto;
+	div {
+		margin-top: 15px;
+	}
+}
+#ponderControls:hover{
+	opacity:0.5;
+}
+.faintlyVisible{
+	opacity:0.1;
+}
+.hidden{
+	opacity:0;
+}
+.offstage{
+	opacity:0;
+	top:300px;
+}
+.onstage{
+	//left:1px;
+}
+.drop{
+	font-family: 'great_vibesregular', Verdana, sans-serif;
+	position:absolute;
+	top:75px;
+	left:45px;
+	color:black;
+	opacity:0.1;
+	font-size:56pt;
+	font-weight:bold;
+}
+.next, .prev{
+	text-decoration: none;
+}
+.next{
+	text-align:right;
+}
+.prev{
+	text-align:left;
+}
+
+#passageData{
+	display:none;
+}
+
+
